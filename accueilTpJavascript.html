@@ -1,0 +1,164 @@
+<!Doctype html>
+<html lang="fr">
+	<head>
+		<title>TP  JS</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style1.css">
+		<!-- L'attribut type n'est pas nécessaire -->
+		<script type="text/javascript">
+			function test() {
+				var age = prompt("Donnez votre age : ", "1");
+				if ((age < 0) || (age > 120)) {
+					// Les instructions se terminent avec un point virgule.
+				 	alert("Vous ne pouvez pas avoir " + age + " ans !"); 
+				} 
+				else { 
+					alert("Vous avez " + age + " ans !"); 
+				}
+			}
+			function bonjour() {
+				var nom = prompt("Donnez votre nom : ", "Clowez");
+				alert("Votre nom est "+nom+"!")
+			}
+			function toto() {
+			document.getElementById("toto1").value = "toto" ;
+			}
+			function affichNom() {
+				var nom = document.getElementById("nom").value;		
+				 alert("Bonjour "+nom); 
+
+				// A compléter : franc()
+
+				// A compléter : euro()
+
+			}
+			function franc() {
+				var euros = document.getElementById("euros").value;
+				document.getElementById("francs").value = euros*6.55957 ;
+			}
+			function euro() {
+				var francs = document.getElementById("francs").value;
+				document.getElementById("euros").value = (francs/6.55957).toFixed(2) ;
+			}
+
+			function resetChamps() {
+				document.getElementById("francs").value = 0;
+				document.getElementById("euros").value = 0;
+		}
+		</script>
+	</head>
+
+<body>
+<div id="page">
+	<header>
+		<img src="image/logo.PNG" alt="L'accès au logo du lycée n'est pas possible">
+		<h1>TP INDUCTIF JAVASCRIPT</h1>
+		<h2>Présentation :</h2>
+		<p> JavaScript est un langage de programmation de scripts principalement employé dans les pages web interactives et à ce titre est une partie essentielle des applications web. Avec les langages de description HTML et CSS, JavaScript est au cœur des langages utilisés par les développeurs web3. Une grande majorité des sites web l'utilisent, et la majorité des navigateurs web disposent d'un moteur JavaScript pour l'interpréter.</p>
+		<p>C'est un langage orienté objet à prototype : les bases du langage et ses principales interfaces sont fournies par des objets. Cependant, à la différence d'un langage orienté objets, les objets de base ne sont pas des instances de classes. En outre, les fonctions sont des objets de première classe.(source wikipédia)</p>
+		<p> Les objets Javascript possède des attributs et des méthodes.</p>
+		<p> La synthaxe de base d'une méthode associée à un objet est : objet.méthode(argument)</p>
+		<p>
+			L'interactivité de Javascript avec l'utilisateur est directement à la gestion d'événements (clic, passage de la souris, saisie de texte, ...)
+		</p>
+	</header>
+	<article id="preambule">
+		<h2>Travail à rendre :</h2>
+		<p> Lire avec attention ce document html en fournissant des screenshots de vos modificatios et en répondant aux questions sur votre compte-rendu. L'observation du code présent sur la page se fera selon votre choix ...</p>
+		<p>Le fichier archive (zip) du répertoire complet avec le fichier Html complété et votre compte-rendu seront à déposer sur Moodle. </p>
+		<p>Il vous sera nécessaire d'utiliser le mémento fourni ou les services Web comme par exemple : <a href="https://www.w3schools.com/jsref/"> w3schools</a> </p>
+	</article>
+	<article>
+		<h2>1. Page d'accueil du TP</h2>
+		<p id="infoCss"> Le style de cette page n'est pas à modifier.</p>
+		<p> a. Lier ensemble les 3 fichiers fournis sur Moodle</p>
+			<p> b. Faire en sorte que cette page s'affiche correctement ...</p>
+		<hr>
+		<h2>2. Gestion évènements</h2>
+		<p>a. Appuyer sur chaque bouton et commenter le résultat. Vous vous attacherez à observer le code source de la page et à identifier les fonctions utilisées par Javascript et l'évènement permettant de les exécuter.</p>
+		<p>b. Donner une liste et la définition de différents évènements très utilisés Javascript (recherche sur le WEB).</p>
+		<form>
+		<input type="button" value="Pop-up" onclick="alert('Voici une première fonction de Javascript')">
+		<input type="button" value="Confirmation" onclick="confirm('Une deuxième fonction de Javascript')">
+		<input type="button" value="Ecriture" onclick="prompt('Une troisième fonction de Javascript')">
+		</form>
+		<hr>
+		<h2>3. Affichage dans une page</h2>
+		
+		<script type="text/javascript">
+
+			document.write("<p>Votre navigateur accepte le Javascript.</p>");
+		</script>
+		<p>Javascript permet d'écrire directement dans une page web.</p>
+		<p>a. Identifier dans le code source de ce paragraphe 3 la méthode permettant cette action.</p>
+		<p>Vous pouvez constater son action en plaçant cette instruction en commentaires (//) et en observant la modification d'affichage sur le paragraphe 3.Ôter la mise en commentaire. Refaire si nécessaire la manipulation.</p>
+		<p>b. Ecrire votre nom et prénom de la même manière dans une balise p.</p>
+			<script type="text/javascript">document.write("<p>Léo Canova-Prévot</p>");
+		</script>
+		<hr>
+		<h2>4. Appel fonction</h2>
+		<p>Javascript étant très proche du C dans sa syntaxe, il permet de définir des fonctions et les appeler.</p>
+		<p>a. Editer le code source et le compléter pour que l'appui sur le bouton "Fonction" ci-dessous permette l'appel de la fonction test présente dans la partie head de la page.</p>
+		<p>b. En analysant la déclaration de la fonction test, vous vous attacherez à commenter dans votre compte-rendu toutes les lignes de code.</p>
+		<p>c. Ajouter un nouveau bouton qui va appeler une fonction nommée bonjour et qui va demander à l'utilisateur son nom et l'afficher dans un pop-up.</p>
+		
+		<form>
+			<input type="button" value="Fonction" onclick="test()"> <!-- A compléter : Ajout dans la balise input de l'événement associé à l'appel de la fonction test() si besoin voir ci-dessous.-->
+			<!-- A compléter : Autre bouton -->
+			<input type="button" value="Fonction" onclick="bonjour()">
+		</form>
+		<hr>
+		<h2>5. Accès aux éléments d'une page</h2>
+		<p>Javascript permet d'accèder aux différents éléments d'une page HTML par son id.</p>
+		<p>a. Remplir la zone de texte ci-dessous et appuyer sur le bouton Valider.</p>
+		<p>b. D'après le code source, indiquer quelle méthode est appliquée pour récupérer le contenu de la zone de texte.</p>
+		<form>
+			<label for="nom">Nom</label>
+			<input type="text" name="nom" id="nom" size=26 >
+			<input type="button" value="Valider" onclick="affichNom()">
+			<!-- A compléter : -->
+			<!-- Attention ne pas nommer un id avec un même nom de fonction -->
+		</form>
+				
+
+		<p>c. Insérer une nouvelle zone de texte avec un bouton qui va appeler une fonction toto. Cette fonction va écrire dans la zone de texte le mot toto.</p>
+		<form>
+			<label for="toto1">TOTO !!</label>
+			<input type="text" name="toto1" id="toto1" size=26 >
+			<input type="button" value="Valider" onclick="toto()">
+		</form>
+		<hr>
+		<h2>6. Convertisseur Francs - Euros</h2>
+		<p> Ci-dessous un convertisseur Francs-Euros.</p>
+		<form name=formulaire>
+			<table>
+				<tr>
+					<td>Francs</td>
+					<td><input type="text" id="francs"></td>
+				<tr>
+					<td>Euros</td>
+					<td><input type="text" id="euros"></td>
+				<tr>
+					<td colspan=2>	
+						<input type="button" value="RESET" onclick="resetChamps()">
+						<input type="button" value="Francs" onclick="franc()">
+						<input type="button" value="Euros" onclick="euro()">
+			</table>
+		</form>
+		<p> Un appui sur le bouton Francs exécutera la fonction "francs" qui va récupérer le contenu de la zone Euro et afficher le résultat de la conversion dans la zone de texte Francs.</p>
+		<p> Un appui sur le bouton Euros exécutera la fonction "euros" qui va récupérer le contenu de la zone Francs et afficher le résultat de la conversion dans la zone de texte Euros.</p>
+		<p>Un appui sur le bouton Reset efface le contenu des zones de texte.</p>
+		<p>Remarque : 1€ = 6.55957 Francs</p>
+		<p>a. Concevoir les fonctions "francs" et "euros"</p>
+		<p>b. Modifier le code HTML de façon à exécuter les fonctions lors de l'appui sur les boutons</p>
+
+	</article>
+
+	<footer>
+			<p>BTS CIEL1 IR</p>
+			<p>TP JS Octobre 2024</p>
+			<p>Lycée Poincare Bar le Duc</p>
+	</footer>
+</div>
+</body>
+</html>

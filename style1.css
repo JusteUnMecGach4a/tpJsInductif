@@ -1,0 +1,88 @@
+*
+{
+	margin : 0 ;
+	padding: 0;
+}
+
+#infoCss {
+	color: greenyellow;
+	font-size: 2em;
+}
+
+#page {
+	width : 80%;
+	margin-left : 10% ; 
+}
+
+body
+{
+	background-color: black;
+	color:white;
+	font-family:arial;
+	width: 80%;
+}
+
+#preambule{
+	background-color: yellow;
+	color:red;
+	padding:50px;
+	margin-top: 30px;
+	margin-bottom: 50px;
+	font-weight: bold;
+}
+
+article p
+{
+	margin-left: 1%;
+	text-align: justify;
+	margin-bottom: 1.5%;
+	margin-right: 1.5%;
+	text-indent: 3%;
+}
+
+article form,article table
+{
+	margin-left:1%;
+}
+
+footer
+{
+	border-top: 2px solid white;
+	text-align: right;
+	font-size: 0.5em;
+}
+
+article td
+{
+		border: 2px solid white;
+		padding: 5px;
+}
+
+hr {
+	margin: 5% 0;
+}
+
+header img {
+		margin :1.33% 0;	
+		width: 19%;	
+}
+
+header h1 {
+		position: absolute;
+		font-size: 3em;
+		left: 30%;
+		top: 5%;
+}
+
+article h2{
+	margin-bottom: 2%;
+}
+
+article form
+{
+	margin-left: 40%;
+}
+
+	
+
+	
